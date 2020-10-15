@@ -37,9 +37,9 @@ public class User implements Serializable {
 	private String email;
 	@Column(length = 100, nullable = false)
 	private String password;
-	@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy = "owner")
 	private List<Request> requests = new ArrayList<>();
-	@OneToMany(mappedBy = "user")
+	@OneToMany(mappedBy = "owner")
 	private List<RequestStage> stages = new ArrayList<>();
 	@Column(length = 20, nullable = false)
 	@Enumerated(EnumType.STRING)
